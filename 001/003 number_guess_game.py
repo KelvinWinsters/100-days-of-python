@@ -8,6 +8,10 @@ def guess_game():
     guess = int(input("Enter a number between 1 and 10 : "))
     while number_to_guess != guess:
         print("Sorry wrong number")
+        if number_to_guess == guess + 1:
+            print("Add 1 to get the correct number")
+        elif number_to_guess == guess - 1:
+            print("Subtract 1 to get the correct number")
         if count_number_of_tries == 4:
             break
         elif guess < number_to_guess:
@@ -23,7 +27,6 @@ def guess_game():
         print("Sorry - you loose")
         print(f"The number you needed to guess was {number_to_guess}")
 
-    print("Game is almost over, Do you want to continue ?")
     print("Game over")
 
 
